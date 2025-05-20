@@ -1,0 +1,36 @@
+.itemCardContainer {
+	width: 300px;
+	height: 350px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #F3F4F6;
+	border-radius: 10px;
+	font-size: 24px;
+}
+
+.itemCardButton {
+	font-size: 24px;
+	font-weight: 400;
+	background-color: #CBCBCB;
+	border-radius: 20px;
+	padding: 2px 15px;
+	color: #363751
+}
+
+.itemCardButton:hover {
+	opacity: 0.7;
+}
+
+.itemCardInfo {
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+}
+
+.itemCardInfo:hover {
+	opacity: 0.5;
+}
