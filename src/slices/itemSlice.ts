@@ -12,10 +12,10 @@ export interface CartItem {
 export const itemSlice = createSlice({
   name: 'item',
   initialState: {
-		itemsResponse: null as Item[] | null,
     items: [] as Item[],
 		cart: {} as CartItem,
 		isMock: false,
+    searchQuery: '',
   },
 	reducers: {
 		addToCart: (state, action) => {
@@ -31,11 +31,11 @@ export const itemSlice = createSlice({
 		setIsMock: (state, action) => {
 			state.isMock = action.payload
 		},
-		setItemsResponse: (state, action) => {
-			state.itemsResponse = action.payload
-		}
+    setSearchQuery: (state, action) => {
+      state.searchQuery = action.payload
+    }
 	},
 })
 
 export const itemReducer = itemSlice.reducer;
-export const { addToCart, setItems, setIsMock } = itemSlice.actions;
+export const { addToCart, setItems, setIsMock, setSearchQuery } = itemSlice.actions;

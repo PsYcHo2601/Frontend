@@ -7,8 +7,8 @@ import { useEffect, useState } from 'react'
 import { Order } from '../pages/order'
 import { fetchItems } from '../api/fetchItems'
 import { login } from '../api/auth'
-import { Provider, useDispatch, useSelector } from 'react-redux'
-import { store, type RootState } from './store'
+import { useDispatch, useSelector } from 'react-redux'
+import { type RootState } from './store'
 import { setIsMock, setItems } from '../slices'
 
 export const App = () => {
