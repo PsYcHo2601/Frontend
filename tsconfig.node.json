@@ -13,6 +13,11 @@
     "moduleDetection": "force",
     "noEmit": true,
 
+    "types": [
+      "vite-plugin-pwa/info.d.ts",
+      "vite-plugin-pwa/client.d.ts"
+    ],
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,

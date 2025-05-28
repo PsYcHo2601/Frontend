@@ -1,8 +1,28 @@
-.mainContainer {
+.menu {
+}
+
+.menuSearchInput {
+	margin: 0 auto;
+	margin-top: 10px;
+	display: none;
+}
+
+.menuContainer {
 	margin-top: 60px;
   display: flex;
   align-items: center;
 	justify-content: center;
   gap: 141px;
 	flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .menuContainer {
+		margin-top: 30px;
+    gap: 30px;
+  }
+
+	.menuSearchInput {
+		display: flex;
+	}
 }

@@ -13,7 +13,7 @@ export const login = async (email: string, password: string): Promise<boolean> =
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ email, password }),
-      credentials: 'include', // отправить и получить session_id
+      credentials: 'include',
     })
 
     if (!response.ok) {

@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import type { CartItem } from '../../../App'
+import type { CartItem } from '../../../app/App'
 
 import './styles.css'
 
@@ -16,17 +16,17 @@ export const OrderCard: FC<Props> = ({ cart }) => {
 			<div className="orderCardHeader">Order</div>
 			<div className="orderCardHeaderInfo">
 				<div className="orderCardHeaderInfoItem">
-					<div className="orderCardItemName">Name:</div>
-					<div className="orderCardItemCount">Count:</div>
-					<div className="orderCardItemPrice">Price:</div>
+					<span>Name:</span>
+					<span>Count:</span>
+					<span>Price:</span>
 				</div>
 			</div>
 			<div className="orderCardBody">
 				{Object.entries(cart).map(([key, value]) => (
 					<div className="orderCardItem" key={key}>
-						<div className="orderCardItemName">{value.name}</div>
-						<div className="orderCardItemCount">{`X${value.count}`}</div>
-						<div className="orderCardItemPrice">{`${value.price}RUB`}</div>
+						<span>{value.name}</span>
+						<span>{`X${value.count}`}</span>
+						<span>{`${value.price}RUB`}</span>
 					</div>
 				))}
 			</div>

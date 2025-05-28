@@ -1,28 +1,23 @@
-import type { FC } from 'react'
-import { type Item } from '../../mock'
-import type { CartItem } from '../../App'
+
 import { ItemCard } from './ItemCard'
 import { CartNoty } from './CartNoty'
 import './styles.css'
+import { SearchInput } from '../../components/search-input'
+import { useSelector } from 'react-redux'
+import type { RootState } from '../../app/store'
 
-interface Props {
-  cart: CartItem
-  handleAddToCart: (item: Item) => void
-  filteredItems: Item[]
-  isLoading?: boolean
-}
-
-export const Menu: FC<Props> = ({ cart, handleAddToCart, filteredItems, isLoading }) => {
-  if (isLoading) {
-    return <div style={{ padding: 20 }}>Загрузка меню...</div>
-  }
+export const Menu = () => {
+  const filteredItems = useSelector((state: RootState) => state.item.items)
 
   return (
-    <div className="mainContainer">
-      {filteredItems.map(item => (
-        <ItemCard key={item.id} item={item} handleAddToCart={handleAddToCart} />
-      ))}
-      <CartNoty cart={cart} />
+    <div className="menu">
+      <SearchInput className='menuSearchInput' />
+      <div className='menuContainer'>
+        {filteredItems.map(item => (
+          <ItemCard key={item.id} item={item}/>
+        ))}
+      </div>
+      <CartNoty />
     </div>
   )
 }

@@ -1,13 +1,12 @@
 import './styles.css'
 import cartIcon from '../../../assets/icons/cart.svg'
-import type { FC } from 'react'
-import type { CartItem } from '../../../App'
 import { Link } from 'react-router-dom'
-interface Props {
-	cart: CartItem
-}
+import { useSelector } from 'react-redux'
+import type { RootState } from '../../../app/store'
 
-export const CartNoty: FC<Props> = ({ cart }) => {
+export const CartNoty = () => {
+	const cart = useSelector((state: RootState) => state.item.cart)
+	
 	const count = Object.values(cart).reduce((acc, curr) => acc + curr.count, 0)
 
 	return (

@@ -14,8 +14,6 @@ export const fetchItems = async (): Promise<{ items: Item[]; isMock: boolean }> 
       credentials: 'include',
     })
 
-    if (!response.ok) throw new Error('Backend error')
-
     const data: BackendItem[] = await response.json()
 
     return {

@@ -1,7 +1,8 @@
 .orderCardContainer {
 	display: flex;
 	flex-direction: column;
-	width: 470px;
+	max-width: 470px;
+	width: 100%;
 	background-color: #CBCBCB;
 	height: 670px;
 	justify-content: space-between;
@@ -36,7 +37,8 @@
 }
 
 .orderCardHeaderInfo {
-	width: 470px;
+	max-width: 470px;
+	width: 100%;
 	background-color: #ffff;	
 	height: 40px;
 	display: flex;
@@ -46,24 +48,23 @@
 }
 
 .orderCardHeaderInfoItem {
-	display: flex;
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
 	align-items: center;
-	justify-content: space-between;
-	width: 350px;
+	width:90%;
 }
 
 .orderCardItem {
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
 	align-items: center;
-	justify-content: space-between;
-	width: 350px;
+	width: 90%;
 	background-color: #F3F4F6;
-	margin: 2px 10px;
 	min-height: 60px;
 	font-size: 20px;
-	padding: 0 10px;
 	border-radius: 10px;
+	padding: 0 10px;
+
 }
 
 .orderCardItemName {
@@ -86,6 +87,6 @@
 	align-items: center;
 	background-color: #F3F4F6;
 	min-height: 60px;
-	width: 370px;
+	width: 90%;
 	border-radius: 10px;
 }

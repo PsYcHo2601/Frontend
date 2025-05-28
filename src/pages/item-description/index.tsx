@@ -1,7 +1,8 @@
 import type { FC } from 'react'
 import './styles.css'
 import { useParams } from 'react-router-dom'
-import { ITEM_MOCK } from '../../mock'
+import type { RootState } from '../../app/store'
+import { useSelector } from 'react-redux'
 
 export const MenuItem: FC = () => {
   
@@ -9,7 +10,8 @@ export const MenuItem: FC = () => {
 
   const currentId = params.id ?? -1
 
-  const item = ITEM_MOCK.result.find((item) => item.id === +currentId)
+  const items = useSelector((state: RootState) => state.item.items)
+  const item = items.find((item) => item.id === +currentId)
 
   if (!item) {
     return <div>Item not found</div>
