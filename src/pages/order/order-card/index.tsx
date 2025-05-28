@@ -1,7 +1,7 @@
 import type { FC } from 'react'
-import type { CartItem } from '../../../app/App'
 
 import './styles.css'
+import type { CartItem } from '../../../slices'
 
 interface Props {
 	cart: CartItem
