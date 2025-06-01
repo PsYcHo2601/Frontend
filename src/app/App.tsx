@@ -39,35 +39,36 @@ export const App = () => {
 
 
 const router = createBrowserRouter([
-	{
-	  path: '/',
-	  element: <Layout />,
-	  children: [
-		{
-		  index: true,
-		  element: (
-			<>
-			  {isMock && (
-				<div style={{ padding: '10px', color: 'orange' }}>
-				  ⚠️ Используются мок-данные (сервер недоступен)
-				</div>
-			  )}
-			  <Menu />
-			</>
-		  ),
-		  shouldRevalidate: () => true
-		},
-		{
-		  path: 'item/:id',
-		  element: <MenuItem />
-		},
-		{
-		  path: 'order',
-		  element: <Order />
-		}
-	  ]
-	}
-  ])
+ {
+   path: '/Frontend',
+   element: <Layout />,
+   children: [
+  {
+    index: true,
+    element: (
+   <>
+     {isMock && (
+    <div style={{ padding: '10px', color: 'orange' }}>
+      ⚠️ Используются мок-данные (сервер недоступен)
+    </div>
+     )}
+     <Menu />
+   </>
+    ),
+    shouldRevalidate: () => true
+  },
+  {
+    path: 'item/:id',
+    element: <MenuItem />
+  },
+  {
+    path: 'order',
+    element: <Order />
+  }
+   ]
+ }
+  ],
+)
   
 
   return (
