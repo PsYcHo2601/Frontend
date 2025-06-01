@@ -1,0 +1,1 @@
+export const AUTH_TOKEN = btoa(`nameless@dao.ru:000`);

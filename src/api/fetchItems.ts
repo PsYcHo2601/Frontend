@@ -1,4 +1,5 @@
 import { ITEM_MOCK, type Item } from '../mock'
+import { AUTH_TOKEN } from './authToken'
 
 interface BackendItem {
   id: number;
@@ -10,8 +11,11 @@ interface BackendItem {
 
 export const fetchItems = async (): Promise<{ items: Item[]; isMock: boolean }> => {
   try {
-    const response = await fetch('http://localhost:8000/services/', {
+    const response = await fetch('api/services/', {
       credentials: 'include',
+      headers: {
+        'Authorization': `Basic ${AUTH_TOKEN}`,
+      },
     })
 
     const data: BackendItem[] = await response.json()

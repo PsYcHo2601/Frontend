@@ -7,6 +7,14 @@ const host = process.env.TAURI_DEV_HOST;
 export default defineConfig({
   clearScreen: false,
   server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
     port: 3000,
     strictPort: true,
     host: host || false,

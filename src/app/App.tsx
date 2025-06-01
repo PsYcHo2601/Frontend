@@ -23,7 +23,7 @@ export const App = () => {
 
 
     const init = async () => {
-        await login('nameless@dao.ru', '000')
+        await login()
         const { items, isMock } = await fetchItems()
         dispatch(setItems(items))
         dispatch(setIsMock(isMock))
