@@ -12,3 +12,6 @@
 1. Прибежаться по [этой](https://tauri.app/start/prerequisites/) странице и убедться, что на компьютере стоит все необходимое
 2. Перейти в папку с исходниками ```cd tauri-src```
 3. В папке с исходниками прописываем ```npx tauri dev```
+
+# РПЗ
+[RPZ.docx](https://github.com/user-attachments/files/20558446/RPZ.docx)
