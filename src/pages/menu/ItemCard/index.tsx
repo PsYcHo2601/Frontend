@@ -20,7 +20,7 @@ export const ItemCard: FC<Props> = ({ item }) => {
 
   return (
     <div className="itemCardContainer">
-      <Link className="itemCardInfo" to={`/item/${item.id}`}><img src={infoIcon} alt={item.name}/></Link>
+      <Link className="itemCardInfo" to={`/Frontend/item/${item.id}`}><img src={infoIcon} alt={item.name}/></Link>
       <img src={item.image} alt={item.name} />
       <span>{item.name}</span>
       <button className="itemCardButton" onClick={handleAddToCart}>{`buy for ${item.price}rub`}</button>

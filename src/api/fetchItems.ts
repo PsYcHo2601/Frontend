@@ -11,8 +11,9 @@ interface BackendItem {
 
 export const fetchItems = async (): Promise<{ items: Item[]; isMock: boolean }> => {
   try {
-    const response = await fetch('api/services/', {
+    const response = await fetch('/api/services/', {
       credentials: 'include',
+      mode: 'cors',
       headers: {
         'Authorization': `Basic ${AUTH_TOKEN}`,
       },

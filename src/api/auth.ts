@@ -9,7 +9,7 @@ export interface RegisterUser {
 
 export const login = async (): Promise<boolean> => {
   try {
-    const response = await fetch('api/login', {
+    const response = await fetch('/api/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -17,6 +17,10 @@ export const login = async (): Promise<boolean> => {
       },
       credentials: 'include',
       mode: 'cors',
+      body: JSON.stringify({
+        email: 'nameless@dao.ru',
+        password: '000',
+      }),
     })
 
     if (!response.ok) {

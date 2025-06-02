@@ -38,7 +38,7 @@ export default defineConfig({
     minify: !process.env.TAURI_ENV_DEBUG ? 'esbuild' : false,
     sourcemap: !!process.env.TAURI_ENV_DEBUG, 
   },
-  base: "/Frontend/",
+  base: "/Frontend",
   plugins: [react(),
     VitePWA({
       registerType: 'autoUpdate',

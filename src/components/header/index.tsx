@@ -13,10 +13,10 @@ export const Header = () => {
 
   return (
     <header className="headerContainer">
-      <Link className="headerLinks" to="/"><img src={logo} alt="logo" /></Link>
+      <Link className="headerLinks" to="/Frontend"><img src={logo} alt="logo" /></Link>
       <div className="desktopNav">
         <SearchInput />
-        <Link className="headerLinks" to="/order">order</Link>
+        <Link className="headerLinks" to="/Frontend/order">order</Link>
       </div>
       <button className="burgerMenu" onClick={toggleMenu}>
         <span className={`burgerLine ${isMenuOpen ? 'open' : ''}`}></span>

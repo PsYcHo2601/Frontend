@@ -10,7 +10,7 @@ export const CartNoty = () => {
 	const count = Object.values(cart).reduce((acc, curr) => acc + curr.count, 0)
 
 	return (
-		<Link to="/order" className="cartNotyContainer">
+		<Link to="/Frontend/order" className="cartNotyContainer">
 			<img className="cartNotyIcon" src={cartIcon} alt="cart" />
 			<div className="cartNotyCount">{count}</div>
 		</Link>
